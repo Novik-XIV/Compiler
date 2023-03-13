@@ -17,8 +17,8 @@ ClangPath=${MainClangZipPath}
 [[ "$(pwd)" != "${MainPath}" ]] && cd "${MainPath}"
 mkdir $ClangPath
 rm -rf $ClangPath/*
-wget -q  https://github.com/ZyCromerZ/Clang/releases/download/17.0.0-20230312-release/Clang-17.0.0-20230312.tar.gz -O "Clang-17.0.0-20230312.tar.gz"
-tar -xf Clang-17.0.0-20230312.tar.gz -C $ClangPath
+wget -q  https://github.com/ZyCromerZ/Clang/releases/download/15.0.0-20220307-release/Clang-15.0.0-20220307.tar.gz -O "Clang-15.0.0-20220307.tar.gz"
+tar -xf Clang-15.0.0-20220307.tar.gz -C $ClangPath
 
 mkdir $GCCaPath
 mkdir $GCCbPath
