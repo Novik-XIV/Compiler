@@ -40,7 +40,7 @@ CLANG_VER="$("$ClangPath"/bin/clang --version | head -n 1 | perl -pe 's/\(http.*
 LLD_VER="$("$ClangPath"/bin/ld.lld --version | head -n 1)"
 export KBUILD_COMPILER_STRING="$CLANG_VER with $LLD_VER"
 DATE=$(date +"%F-%S")
-DATE2=$(date +"%m%d")
+VERSION=SONIC-KSU
 START=$(date +"%s")
 PATH=${ClangPath}/bin:${GCCaPath}/bin:${GCCbPath}/bin:${PATH}
 DTBO=$(pwd)/out/arch/arm64/boot/dtbo.img
@@ -110,7 +110,7 @@ function finerr() {
 # Zipping
 function zipping() {
     cd AnyKernel || exit 1
-    zip -r9 [$DATE2]$KERNEL_NAME[$DEVICE_CODENAME]${DATE}.zip *
+    zip -r9 [$VERSION]$KERNEL_NAME[$DEVICE_CODENAME]${DATE}.zip *
     cd ..
 }
 compile
