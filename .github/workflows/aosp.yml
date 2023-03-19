@@ -1,4 +1,4 @@
-name: MIUI-Variant
+name: AOSP
 
 on: # [push]
   workflow_dispatch:
